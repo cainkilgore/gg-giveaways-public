@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG Giveaways | Discord Bot for Giveaways</title>
+    <meta name="description" content="Easy-to-use Discord bot for hosting giveaways with activity tracking and role requirements.">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/3fe2a03740.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="logo-text"><span class="highlight">GG</span> Giveaways</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#commands">Commands</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-secondary">Documentation</a>
+                    <a href="#" class="btn btn-primary" id="invite-btn">Add to Discord</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Run exciting giveaways in your Discord server</h1>
+                    <p>GG Giveaways is a powerful Discord bot that makes running giveaways simple. Track user activity, set role requirements, and keep your community engaged with fun giveaways.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary btn-large" id="invite-btn-hero">
+                            <i class="fa-brands fa-discord"></i>
+                            Add to Discord
+                        </a>
+                        <a href="#features" class="btn btn-secondary btn-large">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/giveaway-preview.svg" alt="GG Giveaways bot in action">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Active Servers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10k+</div>
+                    <div class="stat-label">Giveaways Run</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">User Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features</h2>
+                <p>GG Giveaways comes packed with everything you need</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <h3>Multiple Winners</h3>
+                    <p>Choose how many winners you want for each giveaway. One, two, or as many as you need!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                    <h3>Activity Tracking</h3>
+                    <p>Ensure only active members can participate in your giveaways with built-in activity monitoring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h3>Role Requirements</h3>
+                    <p>Set specific or minimum role requirements for entering giveaways. Perfect for member-only perks!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Get insights into user participation and giveaway statistics with detailed analytics commands.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <h3>Flexible Duration</h3>
+                    <p>Set giveaways for any duration - minutes, hours, days, weeks, or even longer!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <h3>Reroll Winners</h3>
+                    <p>Changed your mind about a winner? Easily reroll to select a new winner with a single command.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands" class="commands-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple Commands</h2>
+                <p>Easy to use slash commands for all your giveaway needs</p>
+            </div>
+            <div class="commands-display">
+                <div class="commands-list">
+                    <div class="command-card">
+                        <div class="command-name">/ggcreate</div>
+                        <div class="command-description">Start a new giveaway with customizable options</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">/gglist</div>
+                        <div class="command-description">See all active giveaways in your server</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">/ggend</div>
+                        <div class="command-description">End a giveaway early and pick winners</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">/ggreroll</div>
+                        <div class="command-description">Select a new winner for a completed giveaway</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">/ggactive</div>
+                        <div class="command-description">Check if a user is considered active</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-name">/ggscan</div>
+                        <div class="command-description">Scan server history to analyze member activity</div>
+                    </div>
+                </div>
+                <div class="command-preview">
+                    <div class="command-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="window-title">Discord</div>
+                        </div>
+                        <div class="window-content">
+                            <div class="discord-message">
+                                <div class="message-content">
+                                    <code>/ggcreate prize: "$20 Buy, Tip if Profit" duration: 24h winners: 2 require_active: true</code>
+                                </div>
+                            </div>
+                            <div class="discord-response">
+                                <div class="embed">
+                                    <div class="embed-title">🎉 $20 Buy, Tip if Profit 🎉</div>
+                                    <div class="embed-description">
+                                        Time Left: <span class="highlight">Ends in 24 hours</span><br>
+                                        Entries: 0<br>
+                                        Winners: 2<br><br>
+                                        Click the button below to enter!
+                                    </div>
+                                    <div class="embed-footer">Hosted by User#1234</div>
+                                </div>
+                                <div class="discord-buttons">
+                                    <button class="discord-button primary">
+                                        <i class="fa-solid fa-gift"></i> Enter Giveaway
+                                    </button>
+                                    <button class="discord-button secondary">
+                                        <i class="fa-solid fa-users"></i> View Entrants
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to start amazing giveaways?</h2>
+                <p>Add GG Giveaways to your Discord server for free today</p>
+                <a href="#" class="btn btn-primary btn-large" id="invite-btn-cta">
+                    <i class="fa-brands fa-discord"></i>
+                    Add to Discord
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Got questions? We've got answers</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is GG Giveaways free to use?</h3>
+                        <span class="faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! GG Giveaways is completely free to use with all features available to everyone. There are no premium tiers or hidden costs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the activity tracking work?</h3>
+                        <span class="faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>GG Giveaways tracks member activity by monitoring messages sent in your server. To be considered active, a member must have sent at least 10 messages in the last 30 days, been active on at least 3 different days, and not triggered the spam detection.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What permissions does the bot need?</h3>
+                        <span class="faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>GG Giveaways needs permissions to read and send messages, read message history, add reactions, and manage messages. When you add the bot to your server, these permissions will be automatically requested.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I customize the giveaway appearance?</h3>
+                        <span class="faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, the appearance of giveaway embeds is standardized. However, you can customize the prize, duration, winner count, and role requirements for each giveaway you create.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I set up role requirements?</h3>
+                        <span class="faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>When creating a giveaway, you can use the 'role' parameter to specify a required role or 'minimum_role' parameter to set a minimum role hierarchy level. Users without these roles won't be able to enter the giveaway.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a limit to how many giveaways I can run?</h3>
+                        <span class="faq-toggle"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>There's no hard limit on the number of giveaways you can run simultaneously. However, to maintain bot performance, we recommend keeping active giveaways to a reasonable number.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Privacy Policy</h2>
+            <div class="modal-body">
+                <h3>1. Information We Collect</h3>
+                <p>GG Giveaways collects the following information when you use our Discord bot:</p>
+                <ul>
+                    <li>Discord server IDs</li>
+                    <li>User IDs of members who interact with the bot</li>
+                    <li>Message activity data for determining active users</li>
+                    <li>Giveaway entry and participation data</li>
+                </ul>
+
+                <h3>2. How We Use Your Information</h3>
+                <p>We use the collected information to:</p>
+                <ul>
+                    <li>Provide giveaway functionality within your Discord server</li>
+                    <li>Track user activity to determine eligibility for activity-gated giveaways</li>
+                    <li>Generate server-specific analytics about engagement</li>
+                    <li>Improve the bot's functionality and performance</li>
+                </ul>
+
+                <h3>3. Data Storage and Security</h3>
+                <p>All data is stored securely and is only accessible to the bot's processes. We implement appropriate security measures to protect against unauthorized access.</p>
+
+                <h3>4. Data Retention</h3>
+                <p>Activity data is retained for 30 days by default. Completed giveaway data may be stored for up to 90 days for reroll functionality.</p>
+
+                <h3>5. Your Rights</h3>
+                <p>Server administrators can request deletion of their server's data at any time by contacting us through our e-mail support@gg.giveaways.</p>
+
+                <h3>6. Changes to This Policy</h3>
+                <p>We may update this Privacy Policy from time to time. We will notify users of any significant changes.</p>
+
+                <h3>7. Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us through our e-mail support@gg.giveaways.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text"><span class="highlight">GG</span> Giveaways</span>
+                    </div>
+                    <p>The ultimate Discord bot for running engaging giveaways with advanced activity tracking and customization options.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#commands">Commands</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#" id="privacy-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GG Giveaways. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
