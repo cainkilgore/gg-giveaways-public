@@ -241,6 +241,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Crypto address copy button
+    const copyAddressBtns = document.querySelectorAll('.copy-address');
+    if (copyAddressBtns.length) {
+        copyAddressBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const address = this.previousElementSibling.textContent;
+                navigator.clipboard.writeText(address).then(() => {
+                    // Change button icon temporarily to show success
+                    const icon = this.querySelector('i');
+                    const originalClass = icon.className;
+                    icon.className = 'fa-solid fa-check';
+                    
+                    setTimeout(() => {
+                        icon.className = originalClass;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Could not copy text: ', err);
+                });
+            });
+        });
+    }
+    
     // Intersection Observer for animations
     if ('IntersectionObserver' in window) {
         // Add fadeIn animation styles
